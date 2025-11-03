@@ -7,7 +7,7 @@ input[type="text"] {
 /* Optional: center dropdowns and textareas */
 select, textarea {
   text-align: center;
-  font-size: 18px;
+  font-size: 48px;
 }
 
 /* Optional: center labels */
@@ -15,3 +15,4 @@ label {
   text-align: center;
   display: block;
 }
+
