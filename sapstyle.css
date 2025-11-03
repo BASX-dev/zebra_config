@@ -1,7 +1,7 @@
 /* Center all text input fields */
 input[type="text"] {
   text-align: center;
-  font-size: 18px;
+  font-size: 48px;
 }
 
 /* Optional: center dropdowns and textareas */
@@ -15,4 +15,5 @@ label {
   text-align: center;
   display: block;
 }
+
 
