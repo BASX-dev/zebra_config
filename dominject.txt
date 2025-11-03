@@ -1,0 +1,1 @@
+injectJS=https://raw.githubusercontent.com/BASX-dev/zebra_config/main/inject.js
