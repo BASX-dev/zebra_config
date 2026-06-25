@@ -1,0 +1,2 @@
+<link rel='stylesheet' type='text/css' href='file://%INSTALLDIR%/mystyle.css'  pages='*' />
+<script type='text/javascript' src='file://%INSTALLDIR%/myjavascript.js' pages='*' />
