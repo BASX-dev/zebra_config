@@ -1,1 +1,36 @@
-injectJS=https://raw.githubusercontent.com/BASX-dev/zebra_config/main/inject.js
+// TC7301 - Show numeric keypad ONLY for numeric/quantity fields
+// All other fields: no software keyboard
+document.addEventListener('focus', function(e) {
+    var el = e.target;
+    if (!el || el.tagName !== 'INPUT') return;
+
+    var inputType  = (el.getAttribute('type')      || '').toLowerCase();
+    var inputMode  = (el.getAttribute('inputmode') || '').toLowerCase();
+    var fieldName  = (el.getAttribute('name')      || '').toLowerCase();
+    var fieldClass = (el.getAttribute('class')     || '').toLowerCase();
+
+    // Detect numeric fields by HTML type, inputmode, or SAP field name patterns
+    var isNumeric = (
+        inputType  === 'number' ||
+        inputType  === 'tel'    ||
+        inputMode  === 'numeric'||
+        inputMode  === 'decimal'||
+        fieldName.indexOf('qty')    > -1 ||
+        fieldName.indexOf('quan')   > -1 ||
+        fieldName.indexOf('menge')  > -1 ||
+        fieldName.indexOf('anzahl') > -1 ||
+        fieldClass.indexOf('numeric') > -1
+    );
+
+    if (isNumeric) {
+        // Show numeric keyboard via EB API
+        if (typeof EB !== 'undefined') {
+            EB.Keyboard.showSoftInput();
+        }
+    } else {
+        // Hide keyboard for all non-numeric fields
+        if (typeof EB !== 'undefined') {
+            EB.Keyboard.hideSoftInput();
+        }
+    }
+}, true);
