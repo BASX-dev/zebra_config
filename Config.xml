@@ -200,7 +200,7 @@
     <DefaultMetaTags>
     </DefaultMetaTags>
 
-    <CustomDOMElements value="file:///enterprise/device/enterprisebrowser/mytags.txt"/>
+    <CustomDOMElements value="file:///com.zebra.mdna.enterprisebrowser/dominject.txt"/>
 
     </Application>
   </Applications>
