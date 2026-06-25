@@ -1,19 +1,15 @@
-/* Center all text input fields */
-input[type="text"] {
-  text-align: center;
-  font-size: 48px;
-}
-
-/* Optional: center dropdowns and textareas */
-select, textarea {
-  text-align: center;
-  font-size: 48px;
-}
-
-/* Optional: center labels */
-label {
-  text-align: center;
-  display: block;
-}
-
+	#injected_clock {
+    	background:black;
+        color:white;
+        display:flex;
+        align-items:center;
+        justify-content: center;
+        padding:1rem;
+        width:18rem;
+        font-size:1.5rem;        
+        position:absolute;
+        top: 0px;
+        right: 0px;
+		z-index:1;
+  }
 
